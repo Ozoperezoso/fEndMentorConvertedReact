@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&display=swap');
+
+:root{
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html body {
+  background-color: white;
+  color: white;
+  font-family:Barlow Semi Condensed;
+  font-size: fit-content;
+}
+
+/* mobile design */
+
+@media screen and (max-width:899px) {
+  .main-card:first-child{
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-color: var(--moderate-violet);
+    background-repeat: no-repeat;
+    background-position:top right;
+  }
+  
+  .main-card:nth-child(2), .main-card:nth-child(5){
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+    }
+  
+  .main-card:nth-child(2) p, .main-card:nth-child(5) p{
+    color:var(--very-dark-grayish-blue);
+  
+  }
+  
+  .main-card:nth-child(3){
+    background-color: var(--very-dark-grayish-blue);  
+  }
+  .main-card:nth-child(4){
+    background-color: var(--very-dark-blackish-blue);
+    }
+}
+
+/* mid range */
+
+@media screen and (min-width:899px) and (max-width:1199px)  {
+
+  .main-card:nth-child(5){
+    width: fit-content!important;
+  }
+
+}
+
+/* Desktop Design */
+
+@media screen and (min-width:900px) {
+  .grid-container{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns:repeat(3, 1fr);
+  grid-template-rows:repeat(2, 1fr);
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+  margin: 50px;
+  }
+
+  .main-card:first-child{
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-color: var(--moderate-violet);
+    background-repeat: no-repeat;
+    background-position:top right;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    width: 120%;
+  }
+  
+  .main-card:nth-child(2), .main-card:nth-child(5){
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+    }
+  
+  .main-card:nth-child(2) p, .main-card:nth-child(5) p{
+    color:var(--very-dark-grayish-blue);
+  
+  }
+  
+  .main-card:nth-child(2){
+    grid-column-start: 1;
+    grid-row-start: 2;
+    width: 60%;
+  
+  }
+  
+  .main-card:nth-child(3){
+    background-color: var(--very-dark-grayish-blue);
+    grid-column-start: 2;
+    grid-row-start: 1;
+    width: 50%;
+    justify-self: end;
+  
+  
+  }
+  .main-card:nth-child(4){
+    background-color: var(--very-dark-blackish-blue);
+    grid-column-start: 2;
+    grid-row-start: 2;
+    width: 120%;
+    justify-self: end;
+    }
+  
+  .main-card:nth-child(5){
+    grid-column-start: 3;
+    grid-row-start:1;
+    grid-row-end: 3;
+    width: 50%;
+  }
+}
+
+
+p{
+  color: var(--light-gray);
+  font-weight: 500;
+  opacity: .5;
+}
+.strong{
+  font-weight:600;
+  font-size: 1.6em;
+}
+.main-card{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 30px;
+  box-shadow: 10px 10px 10px var(--light-gray);
+}
+
+
+
+.miniature{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.profile-pic{
+  border-radius: 50px;
+  margin: 0 10px;
+  width: 40px;
+}
+
+.graduate-name{
+  font-weight: 600;
+}
+
+.opinion{
+  width: 100%;
+  margin-top: 10px;
+}
+
+.testimonial{
+  width: 100%;
+  margin-top: 10px;
+  opacity: .7;
+}
